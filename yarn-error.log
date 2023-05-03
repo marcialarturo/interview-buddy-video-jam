@@ -1,0 +1,69 @@
+Arguments: 
+  /Users/mac/.nvm/versions/node/v17.4.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/mac/.nvm/versions/node/v17.4.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mac/.nvm/versions/node/v17.4.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/mac/.cargo/bin:/Users/mac/.foundry/bin:/Users/mac/.foundry/bin:/Users/mac/.foundry/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  17.4.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/mac/Desktop/code mirror/pramp3/package.json: Unexpected token } in JSON at position 856
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "pramp3",
+      "private": true,
+      "version": "0.0.0",
+      "type": "module",
+      "scripts": {
+          "dev": "vite",
+          "build": "vite build",
+          "preview": "vite preview"
+      },
+      "dependencies": {
+          "@chakra-ui/react": "^2.5.5",
+          "@emotion/react": "^11.10.6",
+          "@emotion/styled": "^11.10.6",
+          "@fortawesome/fontawesome-svg-core": "^1.2.30",
+          "@fortawesome/free-solid-svg-icons": "^5.14.0",
+          "@fortawesome/react-fontawesome": "^0.1.11",
+          "@huddle01/react": "^0.0.6",
+          "@lighthouse-web3/sdk": "^0.2.1",
+          "codemirror": "^5.57.0",
+          "framer-motion": "^10.12.4",
+          "jsdom": "^21.1.1",
+          "react": "^18.2.0",
+          "react-codemirror2": "^7.2.1",
+          "react-dom": "^18.2.0",
+          "react-icons": "^4.8.0",
+          "react-router-dom": "^5.3.4",
+      },
+      "devDependencies": {
+          "@types/react": "^18.0.28",
+          "@types/react-dom": "^18.0.11",
+          "@types/react-router-dom": "^5.3.3",
+          "@vitejs/plugin-react-swc": "^3.0.0",
+          "autoprefixer": "^10.4.14",
+          "postcss": "^8.4.21",
+          "tailwindcss": "^3.2.7",
+          "vite": "^4.2.0"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
