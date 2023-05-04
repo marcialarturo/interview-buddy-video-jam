@@ -61,13 +61,6 @@ curl -X POST \
 }'
 copy paste on terminal copy
 
-## Project ID
-
-KL1r3E1yHfcrRbXsT4mcE-3mK60Yc3YR
-
-## roomId
-
-"gmf-bylm-dvr"
 
 # Team info
 
