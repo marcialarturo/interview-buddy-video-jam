@@ -1,4 +1,4 @@
-## Web3 Interview Buddy
+## Web3 Interview Prep
 
 A peer-to-peer platform for practicing interviews for DS&A, Behavioral, System Design, Frontend, Practice with a Friend, and more. This is a powerful tool for job seekers and anyone preparing for interviews.
 
@@ -20,7 +20,59 @@ Benefits of the Interview Buddy App:
 
 It is a community of software engineers who come together to prepare for their upcoming coding interviews. It facilitates the exchange of technical knowledge and provides valuable feedback to improve interview skills.
 
-Overall, an Interview Buddy application is a valuable resource for job seekers who are looking to improve their interview skills and gain confidence. By providing a supportive and personalized approach to interview preparation, the application could help users achieve their goals and land their dream jobs.
+Overall, Web3 Interview Prep application is a valuable resource for job seekers who are looking to improve their interview skills and gain confidence. By providing a supportive and personalized approach to interview preparation, the application could help users achieve their goals and land their dream jobs.
+
+## How we built it
+
+Web3 Interview Prep application makes use of the following software:
+
+- `Mentle Network` enables Web3 Interview Prep application to be a scalable platform with fast transactions. We deployed our app on the Alfajores Network.
+
+- `Polygon Mumbai Network` enables Book Swap application to be a scalable platform with fast transactions. We deployed our app on the Gnosis Network.
+
+- `Optimism Network` enables our app to be secure and cost-effective. We deployed our app on the Optimism Network
+
+- `Hyperlane` connects our application across OptimismGoerli and Polygon Mumbai Network. This allows users to interact with our application from both either network which reduces the number of hoops users have to jump through just to use our app in multiple chains, get to your app.
+
+It's about abstracting away the complexity of navigating between chains, and letting you and your users simply focus on your app. Here Hyperlane plays a important part as it help the platforms to be function on multiple chains, thus being true to the original purpose of being easy to access. Here, we use QueryAPI provided by hyperlane to call function across both moonbase alpha and goerli testnets.
+
+- `Valist` facilitated the process of distribution of our in a secure way.
+
+- `TableLand` made our work easy with the Ethereum network. This allows us to work with a relational database to store Employment references and metadata for EVM chains like Ethereum. We will definitely keep using complex TableLand functions in the future.
+
+- `XMTP` facilitated the process of communication between employers and employees, especially for important employment documents. XMTP allows our users to request employment letters and documents in and seamless and secure way.
+
+- `Covalent API` was really helpful for users' donations and tips. This facilitated the retrieval of users’ NFTs and smart contract transactions. The Covalent API endpoints to get all NFTs balance and metadata from a wallet address such as images, contracts name, NFTs images, and balances.
+
+* `IPFS NFTStorage` for data storage on IPFS that generates a transaction hash used to create an NFT of a photo.
+
+* `textile/eth-storage`: facilitated a fast way to store metadata for NFTs such: as names, locations, description, images, wallet addresses, and more. It was perfect for our use case to save their needs on the textile storage.
+
+* `NFTPort` smooths the path of the minting and donating process and eliminates the high transaction fees. Our users will not pay anything for donating NFTs or minting.
+
+* `Solidity` for the smart contract.
+* `OpenZeppelin ERC721` we use the ERC721 template for faster development of our smart contract.
+
+* `Hardhat` for local blockchain development.
+
+* `React Js, Material-ui, Web3` React Js for the frontend, Material-ui, and Web3 to connect to the blockchain.
+
+
+
+## Challenges we ran into
+Smart contracts multi chain functionality took us longer.
+
+
+## Accomplishments that we're proud of
+We are proud of the final MVP and how our project went from an idea to a demo
+
+
+## What we learned
+We learned to work with Huddle SDK and how to deploy to the Mentle network and send calls from the the Polybase database to contract.
+
+
+## What's next for Web3 Interview Prep
+Post updates Upon registration, add a point system for users.
 
 ## Challenges I ran into
 
