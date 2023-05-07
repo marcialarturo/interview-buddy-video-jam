@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   FormControl,
   FormLabel,
@@ -13,8 +13,48 @@ import {
   CheckboxGroup,
   Card,
 } from '@chakra-ui/react'
+import { Polybase } from '@polybase/client'
+
+const db = new Polybase({
+  defaultNamespace:
+    '0x1535283e7a32e43a2f96cf6f758afd6016ae7dc801f19b41b94e02b99410426f1f8c072e11a5af7aac9efe8d15da6042b37c0776c894dda55cba3de021303723',
+})
 
 function AskQuestion(props) {
+  const initializedPolybase = async () => {
+    const createQuestion = await db.applySchema(
+      `@public
+      collection Question {
+        question_id: string;
+        description: string;
+        price?: number;
+        author: string;
+
+        constructor (
+          question_id: string;
+          description: string;
+          price?: number;
+          author: string;
+          ) {
+          this.question_id = question_id;
+          this.description = description;
+          this.price = price;
+          this.author = author;
+          this.author = author;
+        }
+      }
+    `,
+      '0x1535283e7a32e43a2f96cf6f758afd6016ae7dc801f19b41b94e02b99410426f1f8c072e11a5af7aac9efe8d15da6042b37c0776c894dda55cba3de021303723',
+    ) // your-namespace is optional if you have defined a default namespace
+    console.log('🚀 createQuestion:', createQuestion)
+  }
+
+  useEffect(() => {
+    initializedPolybase()
+    console.log('🚀 ~ file: Apartments.tsx:8 ~ db:', db)
+    console.log('initializedPolybase')
+  }, [])
+
   const saveData = (event) => {
     event.preventDefault()
     console.log('event', event)
